@@ -202,7 +202,10 @@ class Lessons(Resource):
         hth_if = hth_index()
         return [l for l in hth_if['lessons']]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 37e5d3eec73b10cd776feae40dc6eb778d4e31f9
 @api.route("/lesson/<string:name>")
 class Lesson(Resource):
     def get(self, name):
@@ -210,6 +213,9 @@ class Lesson(Resource):
             content = f.read()
         return content
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 37e5d3eec73b10cd776feae40dc6eb778d4e31f9
 if __name__ == '__main__':
     app.run(port=8000, debug=True)
