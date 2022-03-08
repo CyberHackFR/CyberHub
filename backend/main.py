@@ -202,12 +202,14 @@ class Lessons(Resource):
         hth_if = hth_index()
         return [l for l in hth_if['lessons']]
 
+
 @api.route("/lesson/<string:name>")
 class Lesson(Resource):
     def get(self, name):
         with open(f"./lessons/{name}.md") as f:
             content = f.read()
         return content
+
 
 if __name__ == '__main__':
     app.run(port=8000, debug=True)
